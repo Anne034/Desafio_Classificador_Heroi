@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafio Classificador de nível de Herói</title>
+</head>
+<body>
+    <script>
+
+    let nome = prompt('Escreva seu nome: ');
+    let nivel = parseInt(prompt('Escreva seu nível: '));
+
+    if (isNaN(nivel)) {
+         alert('Só é permitido números para o nível!');}
+        
+    else if (nome.trim() === ""){
+         alert('Não deixe o nome em branco!');}
+        
+         
+    else {
+        let classificacao;       
+        
+        if (nivel <= 1000) {
+        classificacao = 'Ferro';}
+        
+        else if (nivel >= 1001 && nivel <= 2000) {
+            classificacao = 'Bronze';}
+
+        else if (nivel >= 2001 && nivel <= 5000) {
+            classificacao = 'Prata';}
+
+        else if (nivel >= 5001 && nivel <= 7000) {
+            classificacao = 'Ouro';}
+
+        else if (nivel >= 7001 && nivel <= 8000) {
+            classificacao = 'Platina';}
+
+        else if (nivel >= 8001 && nivel <= 9000) {
+            classificacao ='Ascendente';}
+
+        else if (nivel >= 9001 && nivel <= 10000) {
+            classificacao ='Imortal';}
+
+        else {
+            classificacao = 'Radiante';}
+  
+
+        document.write(`O Héroi de nome ${nome} está no nível de ${classificacao}`); 
+    }
+    </script>
+</body>
+</html>
